@@ -4,8 +4,6 @@ This repo can be used as a starting point to deploy [Rust](https://www.rust-lang
 
 It is based on the [hello_world](https://github.com/SergioBenitez/Rocket/tree/master/examples/hello_world) example powered by the [Rocket](https://github.com/SergioBenitez/Rocket) web framework.
 
-The sample app is up at https://rocket-rust.onrender.com.
-
 ## Deployment
 
 See the guide at https://render.com/docs/deploy-rocket-rust.
