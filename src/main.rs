@@ -4,9 +4,14 @@
 
 #[cfg(test)] mod tests;
 
-#[get("/")]
-fn hello() -> &'static str {
-    "Hello, world!"
+#[get("/barcode/<barcode>")]
+fn hello(barcode: String) -> String {
+    format!("{{\"barcode\": \"{barcode}\", \
+        \"name\": \"Test Product\", \
+        \"price\": 100, \
+        \"image\": \"https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png\"\
+        }}\
+    ")
 }
 
 fn main() {
