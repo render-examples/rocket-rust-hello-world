@@ -1,11 +1,14 @@
 #![feature(proc_macro_hygiene, decl_macro)]
 
+use rocket::response::content::Html;
+
 #[macro_use] extern crate rocket;
 
 #[cfg(test)] mod tests;
 
 #[get("/")]
-fn home() -> String {
+fn home() -> Html<String> {
+    Html(
     format!("<html>
     <head>
         <title>Barcode API</title>
@@ -16,7 +19,7 @@ fn home() -> String {
         <p><a href=\"https://barcode-api.herokuapp.com/barcode/1234\">https://barcode-api.herokuapp.com/barcode/1234</a></p>
     </body>
 </html>
-")
+"))
 }
 
 #[get("/barcode/<barcode>")]
